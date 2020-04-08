@@ -1,0 +1,55 @@
+####################################
+
+############ FIELD INFO #############
+
+####################################
+
+#Enter information about each field in following format - one field description per line
+
+# field.n=FIELD_NAME | INDEX | BUSINESS_DESCRIPTION | DATA_TYPE | LENGTH | SCALE | PRECISION | NOT_NULL | IS_ENCRYPTED_AT_SRC | DO_ENCRYPT | IS_KEY | DO_NOT_PROCESS | TRIM | VALIDATION_REGEX | OPEN_QUOTE | CLOSE_QUOTE
+
+# where n=index i.e.1,2,3…..
+
+#             FIELD_NAME: Name of the column; column can be part of a group in which case the multiple parts of name are separated by dot ‘.’ - Required attribute and a value must be provided.
+
+#             INDEX: Position or index of field in record - Required attribute and a value must be provided.
+
+#             BUSINESS_DESCRIPTION: Business description
+
+#             DATA_TYPE: Data type of field. Valid values are: INTEGER, DECIMAL, DATE, SYMBOL, STRING, CLOB, BOOLEAN
+
+#             LENGTH: Length of field. Required attribute if the value of RECORD.FIELD_DELIMITER IS NULL.
+
+#             PRECISION: Precision
+
+#             SCALE: Scale
+
+#             NOT_NULL: If the field is required or not. Valid values are TRUE, FALSE. Default value is FALSE.
+
+#             IS_ENCRYPTED_AT_SRC: If the field data is encrypted at source or not. Valid values are TRUE, FALSE. Default value is FALSE.
+
+#             DO_ENCRYPT: Is the field data to be encrypted by the system or not. Valid values are TRUE, FALSE. Default value is FALSE.
+
+#             IS_KEY: Is the field part of the record key. Valid values are TRUE, FALSE. Default value is FALSE.
+
+#             DO_NOT_PROCESS: Ignore the field during processing. Valid values are TRUE, FALSE. Default value is FALSE.
+
+#             NO_TRIM: No not trim leading & trailing whitespace from the field. Valid values are TRUE, FALSE. Default value is FALSE.
+
+#             VALIDATION_REGEX: Regular expression to be used for field value validation.Default value is empty String
+
+#             NULL_PROXY: Control value that evaluates and converts qualifying values to null
+
+field.entity_nid                      =entity_nid                | 0 |Podium Unique Entity Identifier | INTEGER | 6 | 6 | 0 | FALSE | FALSE | FALSE | FALSE | FALSE | FALSE |
+
+field.field_nid                        =field_nid                  | 1 |Podium Unique Field Identifier | INTEGER | 6 | 6 | 0 | FALSE | FALSE | FALSE | FALSE | FALSE | FALSE |
+
+field.field_name                    =field_name              | 2 |Field Name - Valid for field level statistics     | STRING  | 40|    |    | FALSE | FALSE | FALSE | FALSE | FALSE | FALSE |
+
+field.statistic_name              =statistic_name        | 3 |Statistic Name, includes record and field level stats | STRING  | 80|    |    | FALSE | FALSE | FALSE | FALSE | FALSE | FALSE |
+
+field.observed_value           =observed_value     | 4 |Observation Value - valid for distribution of values only    | STRING  | 40|    |    | FALSE | FALSE | FALSE | FALSE | FALSE | FALSE |
+
+field.statistic_value  =statistic_value                    | 5 |Data value associated with statistic name    | STRING  | 90|    |    | FALSE | FALSE | FALSE | FALSE | FALSE | FALSE |
+
+ 
